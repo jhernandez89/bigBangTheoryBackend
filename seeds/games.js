@@ -11,6 +11,7 @@ exports.seed = function (knex, Promise) {
         description: 'description test',
         videoURL: 'video url test',
         amazonLink: 'amazon link test',
-        gameLink: 'game link test' },
+        gameLink: 'game link test',
+        season: 1 },
        ]));
 };

@@ -7,6 +7,7 @@ exports.up = function (knex, Promise) {
     table.string('videoURL');
     table.string('amazonLink');
     table.string('gameLink');
+    table.integer('season');
   });
 };
 
