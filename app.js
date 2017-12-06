@@ -4,7 +4,8 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const games = require('./routes/games');
+const episodes = require('./routes/episodes');
+const description = require('./routes/description')
 const index = require('./routes/index');
 const cors = require('cors');
 const app = express();
@@ -25,7 +26,8 @@ app.use(session({
 }));
 
 app.use('/', index);
-app.use('/games', games);
+app.use('/description', description);
+app.use('/episodes', episodes);
 app.use((req, res, next) => {
   const err = new Error('Not Found');
   err.status = 404;
