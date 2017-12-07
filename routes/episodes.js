@@ -15,7 +15,7 @@ router.get('/:id', (req, res) => {
   knex('episodes')
     .leftJoin('description', 'episodes.episode_number', '=', 'description.episode_id')
     .select()
-    .where('episodes.season', req.params.id)
+    .where('episodes.episode_number', req.params.id)
     .then((result) => {
       res.json(result);
     });
